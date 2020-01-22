@@ -161,7 +161,8 @@ int fitsShort(int x) {
  *   Rating: 1
  */
 int thirdBits(void) {
-  return 2;
+   int x = 0x49 | (0x49 << 9);
+   return x | (x << 18);
 }
 /* 
  * anyEvenBit - return 1 if any even-numbered bit in word set to 1
@@ -171,7 +172,7 @@ int thirdBits(void) {
  *   Rating: 2
  */
 int anyEvenBit(int x) {
-  return 2;
+  return 0;
 }
 /* 
  * copyLSB - set all bits of result to least significant bit of x
